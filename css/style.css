@@ -12,7 +12,7 @@
 }
 
 @font-face {
-    font-family: 'segment7standard';
+    font-family: 'segment7Standard';
     src: url('segment7-4gml-webfont.woff2') format('woff2'),
          url('segment7-4gml-webfont.woff') format('woff');
     font-weight: normal;

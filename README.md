@@ -1,4 +1,4 @@
-# PrimeTimer_beta
+# PrimeTimer beta
 Test version of PrimeTimer - Online Timer for Cubing and Puzzle Solving
 
 ## Versions

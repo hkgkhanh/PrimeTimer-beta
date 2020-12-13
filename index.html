@@ -7,7 +7,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta name="keywords" content="prtimer, primetimer, timer, cube timer, rubiks cube, online timer, web timer">
 	<meta name="author" content="Nông Quốc Khánh">
-	<link rel="shortcut icon" type="image/png" href="img-audio\prtimer_icon_black.png"/>
+	<link rel="shortcut icon" type="image/png" href="img-audio\prtimer_icon.png"/>
 	<title>Cube Training/Practising Timer</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="css/landscapeScreen.css">
@@ -56,6 +56,7 @@
 			<text id="scram"></text>
 		</div>
 		<div align="center" id="div_scram_type" style="padding-top: 0; margin-top: 1.5rem;">
+			<sub><img src="img-audio\left-arrow-black.png" alt="last" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)" id="last_scram_btn" onclick="scramble = lastScram; document.getElementById('scram').innerHTML = scramble; drawLastScram();" title="last scramble"></sub>
 
 			<select id="scram_type" onchange="generateScram(); document.getElementById('scram_type').blur(); saveScramType();" class="sel">
 				<option>==========WCA==========</option>
@@ -174,10 +175,11 @@
 				<option value="giga">Gigaminx</option>
 			</select>
 
-			<i>
+			<!--<i>
 				<text id="last_scram_btn" onclick="scramble = lastScram; document.getElementById('scram').innerHTML = scramble; drawLastScram();" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">last</text> /
 				<text id="next_scram_btn" onclick="generateScram()" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">next</text>
-			</i> scramble
+			</i> scramble-->
+			<sub><img src="img-audio\next-black.png" alt="next" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)" id="next_scram_btn" onclick="generateScram()" title="next scramble"></sub>
 			<br>
 
 		</div>
@@ -218,55 +220,6 @@
 
 			<div id="avg_table_div">
 
-				<!--<table id="avg_table" style="width: 100%; border: none; line-height: 1.5;">
-
-					<tr class="table_cell">
-
-						<td class="table_cell" style="width: 30%">
-
-							<img src="img-audio\search-black.png" id="search_icon" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)" onclick="toggleSearchDiv()" title="Search" class="fa"></br>
-							<text class="table_cell"><b>single</b></text></br>
-							<text class="table_cell" id="word_mo3"><b>mo3</b></text></br>
-							<text class="table_cell" id="word_ao5"><b>ao5</b></text></br>
-							<text class="table_cell" id="word_ao12"><b>ao12</b></text></br>
-							<text class="table_cell" id="word_ao50"><b>ao50</b></text></br>
-							<text class="table_cell" id="word_ao100"><b>ao100</b></text></br>
-							<text class="table_cell" id="word_ao200"><b>ao200</b></text></br>
-							<text class="table_cell" id="word_ao500"><b>ao500</b></text></br>
-							<text class="table_cell" id="word_ao1000"><b>ao1000</b></text></br>
-
-						</td>
-
-						<td class="table_cell" style="width: 35%">
-
-							<text class="table_cell"><b>current</b></text></br>
-							<text class="table_cell" id="cur_single" onclick="showStat(1)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-							<text class="table_cell" id="cur_mo3" onclick="showStat(3)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-							<text class="table_cell" id="cur_ao5" onclick="showStat(5)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-							<text class="table_cell" id="cur_ao12" onclick="showStat(12)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-							<text class="table_cell" id="cur_ao50" onclick="showStat(50)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-							<text class="table_cell" id="cur_ao100" onclick="showStat(100)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-							<text class="table_cell" id="cur_ao200" onclick="showStat(200)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-							<text class="table_cell" id="cur_ao500" onclick="showStat(500)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-							<text class="table_cell" id="cur_ao1000" onclick="showStat(1000)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-
-						</td>
-
-						<td class="table_cell" style="width: 35%">
-
-							<text class="table_cell"><b>best</b></text></br>
-							<text class="table_cell" id="best_single" onclick="showStat(1.5)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-							<text class="table_cell" id="best_mo3" onclick="showStat(3.5)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-							<text class="table_cell" id="best_ao5" onclick="showStat(5.5)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-							<text class="table_cell" id="best_ao12" onclick="showStat(12.5)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-							<text class="table_cell" id="best_ao50" onclick="showStat(50.5)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-							<text class="table_cell" id="best_ao100" onclick="showStat(100.5)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-							<text class="table_cell" id="best_ao200" onclick="showStat(200.5)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-							<text class="table_cell" id="best_ao500" onclick="showStat(500.5)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-							<text class="table_cell" id="best_ao1000" onclick="showStat(1000.5)" onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)">-</text></br>
-						</td>
-					</tr>
-				</table>-->
 				<table id="avg_table">
 					<tr>
 						<td onmouseover="bgOnMouseOver(this)" onmouseout="bgOnMouseOut(this)" onclick="toggleSearchDiv()"
@@ -464,13 +417,13 @@
 					</ul>
 					<p><i id="fa-warning" class="fa fa-warning"></i> PLease be aware that PrimeTimer is currently available for most platforms (it won't work with Safari browser). It is recommended that you should use Chrome, Edge or Cốc Cốc to browse PrimeTimer as it has only been tested on these browsers. For more information click <a class="link" href="https://khanhfromvn.github.io/primetimer_page.html" target="_blank">here</a>.</p>
 					<ul>
-						<li><a href="https://khanhfromvn.github.io/PrimeTimer" target="_blank" class="link">PrimeTimer main version</a></li>
-						<li><a href="https://khanhfromvn.github.io/myprojects/PrimeTimer%20latest%20version/index.html" target="_blank" class="link">PrimeTimer beta version</a></li>
-						<li><a href="https://github.com/khanhfromvn/PrimeTimer" target="_blank" class="link">PrimeTimer source code</a></li>
+						<li><a href="https://hkgkhanh.github.io/PrimeTimer" target="_blank" class="link">PrimeTimer main version</a></li>
+						<li><a href="https://hkgkhanh.github.io/PrimeTimer-beta" target="_blank" class="link">PrimeTimer beta version</a></li>
+						<li><a href="https://github.com/hkgkhanh/PrimeTimer" target="_blank" class="link">PrimeTimer source code</a></li>
 					</ul>
 
 					<p style="text-align: center; padding-left: 0.2rem; font-size: 2rem;"><b>Copyright</b></p>
-					<p>License: <a href="https://github.com/khanhfromvn/PrimeTimer/blob/master/LICENSE.md" target="_blank" class="link">GNU General Public License v3.0</a></p>
+					<p>License: <a href="https://github.com/hkgkhanh/PrimeTimer/blob/master/LICENSE.md" target="_blank" class="link">GNU General Public License v3.0</a></p>
 					<p>Written and UI designed by Nông Quốc Khánh: <a href="mailto:hkg11khanh@gmail.com" class="link">hkg11khanh@gmail.com</a></p>
 					<p>Logo designed by Nguyễn Lương Phúc: <a href="mailto:heliosqv98@gmail.com" class="link">heliosqv98@gmail.com</a></p>
 

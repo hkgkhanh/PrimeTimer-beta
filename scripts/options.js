@@ -228,6 +228,8 @@ function changeColor() {
 		document.getElementById("delete-img").src = "img-audio/delete-session-white.png";
 		document.getElementById("search_close_but").src = "img-audio/close-button-white.png";
 		document.getElementById("search_icon").src = "img-audio/search-white.png";
+		document.getElementById("next_scram_btn").src = "img-audio/next-white.png";
+		document.getElementById("last_scram_btn").src = "img-audio/left-arrow-white.png";
 	} else {
 		document.getElementById("logo").src = "img-audio/prtimer_icon_black.png";
 		document.getElementById("option").src = "img-audio/gear-black.png";
@@ -236,6 +238,8 @@ function changeColor() {
 		document.getElementById("delete-img").src = "img-audio/delete-session-black.png";
 		document.getElementById("search_close_but").src = "img-audio/close-button-black.png";
 		document.getElementById("search_icon").src = "img-audio/search-black.png";
+		document.getElementById("next_scram_btn").src = "img-audio/next-black.png";
+		document.getElementById("last_scram_btn").src = "img-audio/left-arrow-black.png";
 	}
 };
 

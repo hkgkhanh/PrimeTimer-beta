@@ -66,14 +66,27 @@ th, td {
 }
 
 #scram_con {
-	padding-left: 2rem;
-	padding-right: 2rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
 	font-family: monospace;
 	max-height: 30vh;
 }
 
 #scram_type {
-	font-family: monospace;
+	/*font-family: monospace;*/
+	width: 5rem;
+}
+
+#last_scram_btn, #next_scram_btn {
+	height: 1.4rem;
+	width: 1.4rem;
+}
+
+#last_scram_btn {
+	margin-right: 2rem;
+}
+#next_scram_btn {
+	margin-left: 2rem;
 }
 
 #draw_scram_dialog {
